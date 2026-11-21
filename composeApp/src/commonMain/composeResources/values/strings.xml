@@ -2689,6 +2689,7 @@
     <string name="anime4k_mode_a_plus">Mode A+A</string>
     <string name="anime4k_mode_b_plus">Mode B+B</string>
     <string name="anime4k_mode_c_plus">Mode C+A</string>
+    <string name="anime4k_mode_monstre">MONSTRE</string>
     <string name="anime4k_menu_description">Real-time anime upscaling. Heavy GPU load.</string>
     <string name="anime4k_menu_installing">Installing…</string>
     <string name="anime4k_menu_not_installed">Anime4K shaders are not installed</string>

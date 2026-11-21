@@ -2592,6 +2592,7 @@
     <string name="anime4k_mode_a_plus">Mode A+A</string>
     <string name="anime4k_mode_b_plus">Mode B+B</string>
     <string name="anime4k_mode_c_plus">Mode C+A</string>
+    <string name="anime4k_mode_monstre">MONSTRE</string>
     <string name="anime4k_menu_description">Mise à l’échelle des anime en temps réel. Sollicite fortement le GPU.</string>
     <string name="anime4k_menu_installing">Installation…</string>
     <string name="anime4k_menu_not_installed">Les shaders Anime4K ne sont pas installés</string>

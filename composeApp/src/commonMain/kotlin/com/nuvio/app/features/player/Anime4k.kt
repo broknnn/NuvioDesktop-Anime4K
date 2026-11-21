@@ -9,6 +9,7 @@ import nuvio.composeapp.generated.resources.anime4k_mode_b
 import nuvio.composeapp.generated.resources.anime4k_mode_b_plus
 import nuvio.composeapp.generated.resources.anime4k_mode_c
 import nuvio.composeapp.generated.resources.anime4k_mode_c_plus
+import nuvio.composeapp.generated.resources.anime4k_mode_monstre
 import nuvio.composeapp.generated.resources.anime4k_mode_off
 import org.jetbrains.compose.resources.StringResource
 
@@ -27,6 +28,13 @@ enum class Anime4kMode(
     ModeAPlus(Res.string.anime4k_mode_a_plus),
     ModeBPlus(Res.string.anime4k_mode_b_plus),
     ModeCPlus(Res.string.anime4k_mode_c_plus),
+
+    /**
+     * Denoise → De-Ring → Restore (VL) → Upscale (VL) → Restore (M) → AutoDownscalePre →
+     * Upscale (M) → Thin HQ + Fast + VeryFast, i.e. Mode A+A with a bilateral denoise pass in
+     * front and three line-thinning passes behind. Heavier than any other preset (83 GPU passes).
+     */
+    Monstre(Res.string.anime4k_mode_monstre),
     ;
 
     val hasShaders: Boolean

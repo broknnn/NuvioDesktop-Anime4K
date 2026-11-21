@@ -39,6 +39,7 @@ class Anime4kPresetTest {
         assertEquals(Anime4kPreset.APlus, resolveAnime4kPreset(Anime4kMode.ModeAPlus, null))
         assertEquals(Anime4kPreset.BPlus, resolveAnime4kPreset(Anime4kMode.ModeBPlus, null))
         assertEquals(Anime4kPreset.CPlus, resolveAnime4kPreset(Anime4kMode.ModeCPlus, null))
+        assertEquals(Anime4kPreset.Monstre, resolveAnime4kPreset(Anime4kMode.Monstre, null))
         assertNull(resolveAnime4kPreset(Anime4kMode.Off, null))
     }
 

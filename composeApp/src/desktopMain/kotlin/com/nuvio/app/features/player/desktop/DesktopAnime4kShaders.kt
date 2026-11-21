@@ -86,6 +86,23 @@ internal enum class Anime4kPreset(
             "Anime4K_Upscale_CNN_x2_M",
         ),
     ),
+
+    /**
+     * MONSTRE: one self-contained GLSL file holding the whole chain, taken from
+     * codeineXO/NuvioCodeineXO ("Sharp & Detailed") and originally written by bloc97 as Anime4K.
+     *
+     * Denoise-Bilateral → De-Ring → Restore CNN (VL) → Upscale CNN x2 (VL) → Restore CNN (M) →
+     * AutoDownscalePre → Upscale CNN x2 (M) → Thin HQ + Fast + VeryFast, 83 passes in total.
+     * It mixes the v3.1/v3.2 and v4.0 shader generations, which is why it cannot be expressed as a
+     * chain of the separate v4.0.1 files this fork installs: the denoise, de-ring and thinning
+     * bricks have no v4.0.1 equivalent in the bundled set.
+     */
+    Monstre(
+        Anime4kMode.Monstre,
+        listOf(
+            "Anime4K_Monstre",
+        ),
+    ),
     ;
 
     companion object {
@@ -140,7 +157,7 @@ internal fun resolveAnime4kPreset(mode: Anime4kMode, source: Anime4kSourceInfo?)
 }
 
 internal object DesktopAnime4kShaders {
-    const val VERSION = "Anime4K v4.0.1"
+    const val VERSION = "Anime4K v4.0.1 + MONSTRE"
 
     /**
      * Every file the installer owns. Kept explicit (rather than listing the resource directory)
@@ -150,6 +167,7 @@ internal object DesktopAnime4kShaders {
         "Anime4K_AutoDownscalePre_x2",
         "Anime4K_AutoDownscalePre_x4",
         "Anime4K_Clamp_Highlights",
+        "Anime4K_Monstre",
         "Anime4K_Restore_CNN_M",
         "Anime4K_Restore_CNN_S",
         "Anime4K_Restore_CNN_Soft_M",
